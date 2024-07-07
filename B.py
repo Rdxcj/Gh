@@ -195,4 +195,4 @@ esponse44 = requests.post('https://live.prd.dlive.tv/hls/sign/url', headers=head
 
 
 
-os.system(f"ffmpeg -re -i '{esponse44}' -vf transpose=1 -threads 4 -vcodec libx264 -b:v 9000k -acodec copy -preset ultrafast -f flv 'rtmps://fa723fc1b171.global-contribute.live-video.net/sk_us-west-2_IlfDEsMGZFxP_WRTUPiRarVBPGbUf5goeIf53N0Wlqx'")
+os.system(f"ffmpeg -headers $'User-Agent: Mozilla/5.0 (Android; vivo V2311) Android/14 version/1.17.74\r\nHost: livestreamc.prdv3.dlivecdn.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: identity\r\nReferer: https://dlive.tv/\r\n' -re -i '{esponse44}' -vf transpose=1 -threads 4 -vcodec libx264 -b:v 9000k -acodec copy -preset ultrafast -f flv 'rtmps://fa723fc1b171.global-contribute.live-video.net/sk_us-west-2_IlfDEsMGZFxP_WRTUPiRarVBPGbUf5goeIf53N0Wlqx'")
