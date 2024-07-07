@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check Docker socket permissions
+      run: |
+         sudo docker ps
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag testghh:latest
+    - name: Run Docker file
+      run: |
+           docker run testghh:latest python3 B.py
