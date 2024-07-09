@@ -20,8 +20,6 @@ jobs:
     - name: Run Docker file
       run: |
            docker run test2ghh:latest python3 Nimo.py
-  
-  build:
     name: Instagram
     runs-on: ubuntu-latest
     steps:
