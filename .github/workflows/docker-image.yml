@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
+    name: Nimo-tv
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -16,7 +16,21 @@ jobs:
       run: |
          sudo docker ps
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag testghh:latest
+      run: docker build . --file Dockerfile --tag test2ghh:latest
     - name: Run Docker file
       run: |
-           docker run testghh:latest python3 Nimo.py
+           docker run test2ghh:latest python3 Nimo.py
+  
+  build:
+    name: Instagram
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check Docker socket permissions
+      run: |
+         sudo docker ps
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag test1ghk:latest
+    - name: Run Docker file
+      run: |
+           docker run test1ghk:latest python3 insta.py
