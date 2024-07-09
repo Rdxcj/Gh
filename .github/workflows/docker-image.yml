@@ -7,8 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    name: Nimo-tv
+  Nimo:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -20,7 +19,7 @@ jobs:
     - name: Run Docker file
       run: |
            docker run test2ghh:latest python3 Nimo.py
-    name: Instagram
+  Insta:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
