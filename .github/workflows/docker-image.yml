@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Testshit
 
 on:
   push:
@@ -11,13 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Check Docker socket permissions
+    - name: Pull Docker image
+      run: docker pull livetest/d3thtr3p:latest
+    - name: Run Docker file
       run: |
-         sudo docker ps
-    - name: Login Docker
-      run: docker login -u livetest -p dckr_pat_scy1iYZ0ilUzc-G9SyHljITHh04
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag livetest/d3thtr3p:latest
-    - name: Push Docker
-      run: docker push livetest/d3thtr3p:latest
-#           docker run test2ghh:latest python3 Nimo.py
+           docker run livetest/d3thtr3p:latest sh -c "whoami && date && ffmpeg"
