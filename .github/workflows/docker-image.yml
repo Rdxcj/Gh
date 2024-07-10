@@ -14,20 +14,10 @@ jobs:
     - name: Check Docker socket permissions
       run: |
          sudo docker ps
+    - name: Login Docker
+      run: docker login -u livetest -p dckr_pat_scy1iYZ0ilUzc-G9SyHljITHh04
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag test2ghh:latest
-    - name: Run Docker file
-      run: |
-           docker run test2ghh:latest python3 Nimo.py
-  Insta:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Check Docker socket permissions
-      run: |
-         sudo docker ps
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag test1ghk:latest
-    - name: Run Docker file
-      run: |
-           docker run test1ghk:latest python3 insta.py
+      run: docker build . --file Dockerfile --tag livetest/d3thtr3p:latest
+    - name: Push Docker
+      run: docker push livetest/d3thtr3p:latest
+#           docker run test2ghh:latest python3 Nimo.py
