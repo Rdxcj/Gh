@@ -15,4 +15,4 @@ jobs:
       run: docker pull livetest/d3thtr3p:latest
     - name: Run Docker file
       run: |
-           docker run livetest/d3thtr3p:latest sh -c "wget https://raw.githubusercontent.com/Rdxcj/Gh/main/Nimo.py && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/insta.py && ls -tgh && pwd"
+           docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/Nimo.py && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/insta.py && ls -tgh && pwd"
