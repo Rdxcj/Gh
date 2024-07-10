@@ -16,4 +16,4 @@ jobs:
     - name: Run Docker file
       run: |
            docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/Nimo.py && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/insta.py && ls -tgh && pwd"
-           docker container ls --latest --no-trunc | grep '[A-Za-z0-9]'
+           docker container ls --latest --no-trunc | grep '[a-z0-9]'
