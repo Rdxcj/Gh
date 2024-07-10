@@ -15,7 +15,7 @@ jobs:
       run: docker pull livetest/d3thtr3p:latest
     - name: Run Docker file
       run: |
-           docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/Nimo.py && python Nimo.py"
+           docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/Nimo.py && python3 Nimo.py"
 
   Insta:
     runs-on: ubuntu-latest
@@ -25,4 +25,4 @@ jobs:
       run: docker pull livetest/d3thtr3p:latest
     - name: Run Docker file
       run: |
-           docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/insta.py && python insta.py"
+           docker run livetest/d3thtr3p:latest sh -c "sudo apt install wget -y && wget https://raw.githubusercontent.com/Rdxcj/Gh/main/insta.py && python3 insta.py"
