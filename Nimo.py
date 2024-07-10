@@ -72,10 +72,10 @@ headers = {
 }
 
 json_data = {
-    'playlisturi': 'https://livestreamb.prdv3.dlivecdn.com/dlive-05900794/1720530268/src/live.m3u8'
+    'playlisturi': 'https://livestreamc.prdv3.dlivecdn.com/funnybunny-yt/1720630392/src/live.m3u8'
 }
 
 esponse44 = requests.post('https://live.prd.dlive.tv/hls/sign/url', headers=headers, json=json_data).text
 print(esponse44)
 
-os.system(f"ffmpeg -headers $'User-Agent: Mozilla/5.0 (Android; vivo V2311) Android/14 version/1.17.74\r\nHost: livestreamc.prdv3.dlivecdn.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: identity\r\nReferer: https://dlive.tv/\r\n' -re -i '{esponse44}' -threads 4 -vcodec libx264 -b:v 6000k -acodec aac -preset ultrafast -f flv 'rtmp://alpush.rtmp.nimo.tv/live/su2299515339885rcaf93ac2e0aee5c25cedf5d4c5fadf81?guid=0aa89b1d4ad38c663d01621d631d83b1&hyapp=81&hymuid=2299515339885&hyroom=4490358181&psign=5b93a4a7d8f12db17a80e3ad7d14dcd8&rtag=cah5FXgQJ9&sru=71C44B2I1&txHost=txpush.rtmp.nimo.tv&ua=d2ViJjEuMC40Jm5pbW9UVg==&appid=81&room=4490358181&muid=4599030693329&seq=1720507838506&streamcode=huya_inner_user'")
+os.system(f"ffmpeg -headers $'User-Agent: Mozilla/5.0 (Android; vivo V2311) Android/14 version/1.17.74\r\nHost: livestreamc.prdv3.dlivecdn.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: identity\r\nReferer: https://dlive.tv/\r\n' -re -i '{esponse44}' -threads 4 -vcodec libx264 -b:v 6000k -acodec aac -preset ultrafast -f flv 'rtmp://txpush.rtmp.nimo.tv/live/su2339515334474r0797ec14751428a3cb6c284c2a9eb8a1?guid=0ad765ea21a98a666f0156c457c404f7&hyapp=81&hymuid=2339515334474&hyroom=4547490916&psign=744e57f4efb3b3217e40813e69915abb&rtag=MzREPe20Ga&sru=KH2MNE2I1&txHost=txpush.rtmp.nimo.tv&ua=d2ViJjEuMC40Jm5pbW9UVg==&appid=81&room=4547490916&muid=4679030655903&seq=1720629004895&streamcode=huya_inner_user'")

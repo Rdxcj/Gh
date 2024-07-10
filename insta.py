@@ -74,7 +74,7 @@ headers = {
 }
 
 json_data = {
-    'playlisturi': 'https://livestreamb.prdv3.dlivecdn.com/dlive-05900794/1720530268/src/live.m3u8'
+    'playlisturi': 'https://livestreamc.prdv3.dlivecdn.com/funnybunny-yt/1720630392/src/live.m3u8'
 }
 
 esponse44 = requests.post('https://live.prd.dlive.tv/hls/sign/url', headers=headers, json=json_data).text
