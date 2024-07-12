@@ -73,7 +73,7 @@ headers = {
     'priority': 'u=1, i',
 }
 
-url = re.findall("https://.*/src/live.m3u8", requests.get("https://live.prd.dlive.tv/hls/live/katlivetv.m3u8").text)[0]
+url = re.findall("https://.*/src/live.m3u8", requests.get("https://live.prd.dlive.tv/hls/live/dlive-05900794.m3u8").text)[0]
 
 json_data = {
     'playlisturi': f'{url}'
